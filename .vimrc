@@ -6,14 +6,14 @@ set laststatus=2
 
 "nerdtree配置
 map <F2> :NERDTreeToggle<CR>
-autocmd vimenter * NERDTree  "自动开启Nerdtree
+"autocmd vimenter * NERDTree  "自动开启Nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "当NERDTree为剩下的唯一窗口时自动关闭
 "打开当前文件所在位置
-map <F3> :NERDTreeFind<CR>
+"map <F3> :NERDTreeFind<CR>
 "打开vim光标在文件中而不是树中
-autocmd VimEnter * NERDTree
-wincmd w
-autocmd VimEnter * wincmd w
+"autocmd VimEnter * NERDTree
+"wincmd w
+"autocmd VimEnter * wincmd w
 
 "显示行号
 set number
@@ -23,7 +23,6 @@ set cursorline
 
 "tab长度为4个空格
 set tabstop=4
-
 
 "插件管理
 call plug#begin('~/.vim/plugged')
@@ -41,16 +40,16 @@ Plug 'scrooloose/nerdtree'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
 
 "文件查找
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-"Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'ctrlpvim/ctrlp.vim'
 
 "状态栏
 Plug 'itchyny/lightline.vim'
-let g:lightline = {
-      \ 'colorscheme': 'powerline',
-      \ }
+"let g:lightline = {
+"      \ 'colorscheme': 'powerline',
+"      \ }
 
 "文本选择
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
