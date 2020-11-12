@@ -29,7 +29,7 @@ call plug#begin('~/.vim/plugged')
 "配色方案
 Plug 'morhetz/gruvbox'
 "颜色方案
-autocmd vimenter * colorscheme gruvbox
+colorscheme gruvbox
 set background=dark    " Setting dark mode
 
 "Plug 'flazz/vim-colorschemes'
